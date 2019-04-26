@@ -41,7 +41,6 @@ io.on('connection',(socket) => {
                 mang_room.push(data);
             }
         }
-
         session.mang_room = mang_room;
         socket.emit('server-send-room-socket',data);
         io.sockets.emit('server-send-rooms',mang_room);
